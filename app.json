@@ -1,206 +1,478 @@
 {
-    "name": "🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭 WhatsApp User Bot v5.0.0",
-    "description": "World best Sinhala/English WhatsApp Button Bot Developer Achi Fernando Enjoy Our Bot",
-    "logo": "https://telegra.ph/file/f3b0b4e681583334b7330.jpg",
-    "keywords": ["Achi Bro lk | PG", "ALPHA"],
-    "stack": "container",
-    "env": {
-      "ALPHA_SESSION": {
-            "description": "Paste your QR session that you got from https://replit.com/@CTBOT/Alpha-Qr?v=1. ඇල්ෆා qr කේතය යොදන්න.",
-            "required": true
-        },      
-        "ALIVE_LOGO": {
-            "description": "If you do not want to change Alive Logo put here to your image direct link or, type default. ඔබගෙ alive logo එක සාදහා ඔබෙ logo එකක් යේදිමට අවශ්‍ය නම් මෙහි link එක යොදන්න.",
-            "required": false,
-            "value": "default"
-        },
-        "SONG_UPLOAD": {
-            "description": "SONG UPLOAFING MESSAGE අවශ්‍ය නම් මෙය වෙනස් කරගන්න.",
-            "value": "🇱🇰🎭.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*"
-        },
-        "SONG_DOWNLOAD": {
-            "description": "SONG DOWNLOADING MESSAGE අවශ්‍ය නම් මෙය වෙනස් කරගන්න.",
-            "value": "🇱🇰🎭.  *ඔබ සෙවූ ගීතය බාගත කරමින් ඇත....*"
-        },
-        "VIDEO_UPLOAD": {
-            "description": "VIDEO UPLOADING MESSAGE අවශ්‍ය නම් මෙය වෙනස් කරගන්න.",
-            "value":"🇱🇰🎭.  *ඔබ ඉල්ලූ  විඩීයෝව ඔබ වෙත එවමින් ඇත.*"
-        },
-        "VIDEO_DOWNLOAD": {
-            "description": "VIDEO DOWNLOADING MESSAGE අවශ්‍ය නම් මෙය වෙනස් කරගන්න.",
-            "value":"🇱🇰🎭.  *ඔබ  ඉල්ලූ විඩීයෝව  බාගත කරමින් ඇත....*"
-        },
-        "TIME_ZONE": {
-            "description": "YOUR COUNTRY TIME ZONE ලන්කාවෙ අය තියන විදිහට තියන්න..",
-            "value":"Asia/Colombo"
-        },
-        "SUDO": {
-            "description": "If you do not know how to use it, leave it blank! SUDO mode; Your number must be an international number. So you have to have your number after the country code. Example: 947xxxxxxxx (Sri lanka No. 94) ඔබගෙ බොට් වෙනත් WhatsApp අංකයකට ක්‍රියා කර විමට මෙහි එම අංකය යොදන්න.",
-            "required": false
-        },
-        "LANGUAGE": {
-            "description": "Enter your language. To enable Sinhala, type SI. or to enable English, type EN. මෙහි අවශ්‍ය නම් භාශාව වෙනස් කර ගන්න.",
-            "required": true,
-            "value": "si"
-        },
-        "WELCOME": {
-            "description": "Welcome message type pp or gif යමෙකු group එක තුලට පැමිනි විට යොදන massage එකත් සමග ඔහුගෙ dp එක වැටිමට අවශ්‍ය නම් pp ලෙස යොදන්න, අප විසි ලබාදෙන gif එක අවශ්‍ය නම් gif ලෙස යොදන්න.",
-            "required": true,
-            "value": "gif"
-        },
-        "AUTO_BIO": {
-            "description": "Setup AUTO BIO feature. Adding a live clock for your WhatsApp about. ඔබගෙ about එක තුල live වෙලාව හා දිනය පෙන්න විමට අව්ශ්‍ය නම් true ලෙස වෙනස් කරන්න. ",
-            "required": true,
-            "value": "false"
-        },
-        "HANDLERS": {
-            "description": "Do not change ❌ .  bot prefix to use commands. කිසිවක් නොකරන්න.",
-            "required": true,
-            "value": "^[.!#$,*@]"
-        },
-        "ANTIBAD": {
-            "description": "Set True , Activate Anti-Bad word for your groups. අසභ්‍ය වචන කියුවිට group එක තුලින් පන්නා ඩැමිමට අව්ශ්‍ය නම් true ලෙස යොදන්න. ",
-            "required": true,
-            "value": "false"
-        },
-        "ANTI_LINK": {
-            "description": "Set True , Activate anti link for your groups. අන්වශ්‍ය link දැමු විට group එක තුලින් පන්නා ඩැමිමට අව්ශ්‍ය නම් true ලෙස යොදන්න. ",
-            "required": true,
-            "value": "false"
-        },
-        "GROUP_RULES": {
-            "description": "Set your group Rules. ඔබගෙ group එකෙ නිති තිබෙ නම් මෙහි යොදන්න. ",
-            "required": true,
-            "value": "No Rules"
-        },
-        "GROUP_DETAILS": {
-            "description": "Set You Group. ඔබගෙ සියලු group විස්තර මෙහි යොදන්න. ",
-            "required": false,
-            "value": "default"
-        },
-        "SEND_READ": {
-            "description": "Need to show user whether bot message seen or not? ඔබගෙ බොට් massage කියවු බවට නොපෙනි විමට අවශ්‍ය නම්  false ලෙස යොදන්න. ",
-            "required": true,
-            "value": "true"
-        },
-        "HEROKU": {
-            "description": "Heroku මෙය වෙනස් නොකරන්න. ",
-            "required": true,
-            "value": "true"
-        },
-        "HEROKU_API_KEY": {
-            "description": "https://dashboard.heroku.com/account Click this link. Scroll down for the API key. Then click the Reveal button. Copy the API key and paste the API Key empty box below. ඔබගෙ heroku ගිනුමෙ api කෙතය යොදන්න. ",
-            "required": true
-        },
-        "HEROKU_APP_NAME": {
-            "description": "Use the same App name as first. ඔබ මෙහි ඉහතින් දැමු app name එක මෙහි යොදන්න. ",
-            "required": true
-        },
-        "MUTE_MESSAGE": {
-            "description": "Message received when mute a group. If you do not want to change this message, type default. ඔබගෙ group එක admin only දාන විට ලැබෙන massage එක මෙහි යොදන්න. ",
-            "required": false,
-            "value": "default"
-        },
-        "BLOCK_CHAT": {
-            "description": "Select the chat where the bot does not work. Ex: 947xxxxxxxx && 947xxxxxxxx හෝ 947xxxxxxxx,947xxxxxxxx",
-            "required": false,
-            "value": "no chats added ඔබගෙ බොට් යම් කිසි අංකයකට වැඩ නොකරන ලෙස අවශ්‍ය නම් මෙහි එම අංකය යොදන්න. "
-        },
-        "UNMUTE_MESSAGE": {
-            "description": "Message received when unmute a group. If you do not want to change this message, type default. ඔබගෙ group එක admin only ඉවත් කරන විට ලැබෙන massage එක මෙහි යොදන්න. ",
-            "required": false,
-            "value": "default"
-        },
-        "BLOCK_MESSAGE": {
-            "description": "Modifiable chat block notification. If you do not want to change this message, type default. කෙනෙකුව block කරන විට යොදන massage එක මෙහි යොදන්න. ",
-            "required": false,
-            "value": "default"
-        },
-        "UNBLOCK_MESSAGE": {
-            "description": "Modifiable chat unblock notification. If you do not want to change this message, type default. කෙනෙකු unblock කරන විට යොදන massage එක මෙහි යොදන්න.",
-            "required": false,
-            "value": "default"
-        },
-        "WORK_TYPE": {
-            "description": "The way the bot works. If you use public, everyone can use the bot. If you use private, only you can use your bot. ඔබගෙ බොට් ඔබට පනක් ක්‍රියා කර විමට අවශ්‍ය නම මෙහි private නැති නම් වෙනස් නොකරන්න.  ",
-            "required": true,
-            "value": "public"
-        },       
-        "DEBUG": {
-            "description": "If you do not know this. Give it up. වෙනස් නොකරන්න. ",
-            "required": true,
-            "value": "false"
-        },
-        "WELCOME_LOGO": {
-            "description": "To change the welcome message video, enter your video link below ඔබට welcome logo එකට අවශ්‍ය link එක මෙහි යොදන්න.",
-            "required": true,
-            "value":"https://telegra.ph/file/4ce438f1111969bdd9df1.mp4"
-        },
-        "BYE_LOGO": {
-            "description": "Below is your video link to change Goodbye message video. ඔබට bye logo එක අවශ්‍ය නම මෙහි එහි link එක යොදන්න. ",
-            "required": true,
-            "value":"https://telegra.ph/file/3a2582be8423628a180c0.gif"
-        },
-        "REMOVE_BG_API_KEY": {
-            "description": "Here you go to the website remove.bg and sign up and get an API key. Leave the API key in this space. ඔබගෙ photos වල background ඉවත් කිරිමට අවශ්‍ය නම මෙම api කෙතය නෙහි යොදන්න. thiyna code eka use karnna one num ekath wada karnwa",
-            "required": false,
-            "value": "h2N1wqk38UrKfU44tZyPPWP3"
-        },
-        "ALIVE_MESSAGE": {
-            "description": "The message you get when you check whether the bot is online or not. This is not necessarily the case. ඔබට alive massage එකට අවශ්‍ය ලෙස මෙහි එය යොදන්න.",
-            "required": false,
-            "value": "default"
-        },
-        "BAN_MESSAGE": {
-            "description": "The message you get when someone commands you as .ban and removes it. If you do not want to change this message, type default. යම් කිසිවෙමු ඔබගෙ සමුහයෙන් පන්න දාමනවිට පැමිනෙන massage එක වෙනස් කිරිමට අව්ශ්‍ය නම් මෙහි යොදන්න. ",
-            "required": false,
-            "value": "default"
-        },
-        "ADD_MESSAGE": {
-            "description": "If you do not want to change this message, type default. කෙනෙකු ඔබගෙ group එකට add කරන විට ලැබෙන massage එක මෙහි යොදන්න. ",
-            "required": false,
-            "value": "default"
-        },
-        "KICKME_MESSAGE": {
-            "description": "If you do not want to change this message, type default. ඔබ group එකකින් ඉවත් වන විට ලැබෙන massage එක මෙහි යොදන්න. ",
-            "required": false,
-            "value": "default"
-        },
-        "PROMOTE_MESSAGE": {
-            "description": "If you do not want to change this message, type default. admin වරයෙකු පත් කර විට ලැබෙන massage එක මෙහි යොදන්න.",
-            "required": false,
-            "value": "default"
-        },
-        "DEMOTE_MESSAGE": {
-            "description": "If you do not want to change this message, type default.admin වරයෙකු ඉවත් කර විට ලැබෙන massage එක මෙහි යොදන්න. ",
-            "required": false,
-            "value": "default"
-        },
-        "AFK_MESSAGE": {
-            "description": "If you do not want to change this message, type default. ඔබ online නොමැහි විට යොදන massage එක මෙහි යොදන්න.",
-            "required": false,
-            "value": "default"
-        },
-        "NO_ONLINE": {
-            "description": "This is not necessarily the case. කිසිවක් වෙනස් නොකරන්න.",
-            "required": false,
-            "value": "true"
-        },
-        "CAPTION": {
-            "description": "LOGO MAKER CAPTION  මෙහි ඔබගෙ බොට්ගෙ නම යොදන්න. ",
-            "required": true,
-            "value": "   ▷ ᴹᴬᴰᴱ 🄱🅈 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭 │"
-        },
-        "COFFEEHOUSE_API_KEY": {
-            "description": "Give it up. We give you this. කිසිවක් වෙනස් නොකරන්න. ",
-            "required": false,
-            "value": "true"
-        }
+  "creds": {
+    "noiseKey": {
+      "private": {
+        "type": "Buffer",
+        "data": "kC3fE9uOk+acTcwWoH1vOcljE4IbKczQJNBRnLcjEX0="
+      },
+      "public": {
+        "type": "Buffer",
+        "data": "5eJXlbBLF5YjP8hT+5smi/Ds0F5Jz/+8BwvP3KMMzB4="
+      }
     },
-  "addons": [{
-      "plan": "heroku-postgresql"
-    }],
-    "buildpacks": [{
-      "url": "heroku-community/apt"
-      }]
+    "signedIdentityKey": {
+      "private": {
+        "type": "Buffer",
+        "data": "IB13Bcl6OZqpv2os2kSQcxkGgDJOCUq5SmHR14+NBn0="
+      },
+      "public": {
+        "type": "Buffer",
+        "data": "jdhS0hweyUFCW+hw1oQN3DT4z/ujQ+n1S/OgvTlXBnU="
+      }
+    },
+    "signedPreKey": {
+      "keyPair": {
+        "private": {
+          "type": "Buffer",
+          "data": "yKkVC/qlKZaJZo3RH1wWVL+hzT0tE/3YlL3mXUQ+anI="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "Q6yYC58nZmXN/+KWkwxklXKClvTx7Oe4kPhjbq32vAU="
+        }
+      },
+      "signature": {
+        "type": "Buffer",
+        "data": "2TzozShbensNnbVCHaV8qOaYTXA93PkbSnXfdA7tFCrkp/JlPxorUksUn8tGuUHrKsxiH3XEihjmTxded/vOBg=="
+      },
+      "keyId": 1
+    },
+    "registrationId": 91,
+    "advSecretKey": "1BEbbvj17TJ78L0PkFy0LoFvCe45GLvR4MeSnwDA6CM=",
+    "nextPreKeyId": 31,
+    "firstUnuploadedPreKeyId": 31,
+    "serverHasPreKeys": true,
+    "account": {
+      "details": "CKGX0scCEI2Y8JUGGAc=",
+      "accountSignatureKey": "87CrZS4WusBBaEoFf9mvEPhvwKBxeUQwApdZeSwf4E4=",
+      "accountSignature": "19TOIPofwMge7LaIaWGbDNHGMAmGQPJZfz48IO36b6p989FnnJQrw8jJe89m9HoB39En512G7wR8ZHSgj1ZsDA==",
+      "deviceSignature": "4t4BWc8mq6c22myA5qO0NXw42EwxxUk5O76/Uh/DdgulxRarMK0UY8s7Pl8tZpLZpiuUh2k3R4IaiUy9oHPnAg=="
+    },
+    "me": {
+      "id": "94725181982:7@s.whatsapp.net",
+      "verifiedName": "",
+      "name": "ಠಿ_ಠ Chamod Bimasha O_o"
+    },
+    "signalIdentities": [
+      {
+        "identifier": {
+          "name": "94725181982:7@s.whatsapp.net",
+          "deviceId": 0
+        },
+        "identifierKey": {
+          "type": "Buffer",
+          "data": "BfOwq2UuFrrAQWhKBX/ZrxD4b8CgcXlEMAKXWXksH+BO"
+        }
+      }
+    ],
+    "lastAccountSyncTimestamp": 1656491023,
+    "myAppStateKeyId": "AAAAABoi"
+  },
+  "keys": {
+    "preKeys": {
+      "1": {
+        "private": {
+          "type": "Buffer",
+          "data": "+HFQ791DM40uYCLCvVEEyWz3dQ8bPZ6imyoO5/iGZ0s="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "NeS58UatnyX9PLZBVHGFKBrML/BMovBGdegtQB3wHRc="
+        }
+      },
+      "2": {
+        "private": {
+          "type": "Buffer",
+          "data": "UKj5IK7pFN+l5iDXnu3A6YKZSVbv9vpkvXGr16lBe0w="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "4ZbVK0oTtghpVPd1gDJ1POXl+pU1klZW3Ztf4UenIUU="
+        }
+      },
+      "3": {
+        "private": {
+          "type": "Buffer",
+          "data": "MGEhHJ5lKxKQq9bvaR6g2JFcqh4mxcpn1m0+YveSVVk="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "N5NDCCu4+DS8YTnq4RceIOdGamLMexXGSTJOZ5zZ7B4="
+        }
+      },
+      "4": {
+        "private": {
+          "type": "Buffer",
+          "data": "4LdehLdAkePWUDZCP5V4jYD3bWDUjv50ypVavi76znI="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "QbBCoHOg8ffQLBhww8kInvIis3cdcsJd0/WnfpTRPlI="
+        }
+      },
+      "5": {
+        "private": {
+          "type": "Buffer",
+          "data": "OGCv7vMQGtfAzUX8K9+Z4DPe6+PdD4uywcH/GVTNHH4="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "Fd0K9VAfKzYqxbpxm7MXjSnKc2RDxpad7O+3n1nFE3w="
+        }
+      },
+      "6": {
+        "private": {
+          "type": "Buffer",
+          "data": "0IN7B8ULF4IeT8/4yUmsH3qd84FSoEucPavd3igCE1c="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "SN/BqzTMTW92y14gMgzbLh2+It3hcpX6c37lUm4dzHo="
+        }
+      },
+      "7": {
+        "private": {
+          "type": "Buffer",
+          "data": "oBG5F6o5uQ010IqlGR2k8TjOM2IwJgShne1DrvFwNko="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "C7rHp6EucAUXdn9f+imPTXhK9VP11gYylBYC0lqbmnA="
+        }
+      },
+      "8": {
+        "private": {
+          "type": "Buffer",
+          "data": "iOQLQ/Gqg7ZcADhJ/vBYlbC/446A/f0pO8ssWjmx7GY="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "eQFVXxdPQDPyO4Xaf+5ZU2YL+FBkE/pDzFyXrbkpHhA="
+        }
+      },
+      "9": {
+        "private": {
+          "type": "Buffer",
+          "data": "gKesL+yZLVpVodq++BG1ivuEOYX+rFEB5pRdKrXB+Es="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "a6k7ylQfttEwDvGy2C0xm22Er+cudJCqmnvTV78Xn3Q="
+        }
+      },
+      "10": {
+        "private": {
+          "type": "Buffer",
+          "data": "SEx7Q0bffOCINEu9ExJWa4ZZu22qInT4ajSDiAGI5Hs="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "Iz1Idwul0NIYLw9lcpA1DhkjDTYwNiWe8qYFCWNdMXg="
+        }
+      },
+      "11": {
+        "private": {
+          "type": "Buffer",
+          "data": "aGCfZaZNmC4b04KvgdpHenCZo6wzU/0LQiiefeX9nWU="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "uwAfYsTNzpYS0FggJQZ/Yw0is84F/5GGzx1aqURJJSc="
+        }
+      },
+      "12": {
+        "private": {
+          "type": "Buffer",
+          "data": "aGITYlLfG0POOvr1MUAB+c530ERMpnTjUmD6cP2LW0c="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "ch5vwHmnnA+RJTIwLluhjk1NXZQzcfrf62e8WL06SUM="
+        }
+      },
+      "13": {
+        "private": {
+          "type": "Buffer",
+          "data": "qERCYPwuTi0+UgtlrTSaZOqm77COS4CzBJUM3aLIz2I="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "nZqEkuCCPp5qQMlqEyWPWn6KQUnKK9bJaIlUdV943xU="
+        }
+      },
+      "14": {
+        "private": {
+          "type": "Buffer",
+          "data": "+A4d2i0k3keeK2w68KOnubzo61CiNAzoYnWQxc9iiHY="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "nQ9X8n75+IsEq1Xm9uPVEtBtPoiGS0sZoKllGP5p+EI="
+        }
+      },
+      "15": {
+        "private": {
+          "type": "Buffer",
+          "data": "eF62GEO9xf1Bfp8nPbzKVq0Jb9sfMI+g25SDcUtzTWI="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "LP5TWrwNbZH4xfSfzNQuwHpoG+k0KuBp3k8ucslO+CY="
+        }
+      },
+      "16": {
+        "private": {
+          "type": "Buffer",
+          "data": "YIA38IfgHWCmPwaRJ2LKLUu2ae/yUnvhUFcKNKRM9W4="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "mXlX1CtvapvA7+dUMusFdQUWR3bzoUC/WWH4faVYhQY="
+        }
+      },
+      "17": {
+        "private": {
+          "type": "Buffer",
+          "data": "6Itam2g+XAJLySuQD/gBflr9INdaxjSb2HDD3Vj6zkA="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "jGeF2PWJ6/uqEdeJ22ELDbVb0xxZxzevUGnOJ618nXI="
+        }
+      },
+      "18": {
+        "private": {
+          "type": "Buffer",
+          "data": "oI4YwdOB1ViDJQMlnscLD2LjAgi664x56jGiyk2eO2k="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "t+Pqeu1cm6xeUPytz1vB0VbtUy+lEKjk338STl5/Emo="
+        }
+      },
+      "19": {
+        "private": {
+          "type": "Buffer",
+          "data": "SGVHKyuFbJWNQN9mtv/0bmMyOwA4o48h7eVYE9HxDVE="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "/5u0NC2EYKgvUn6RwarKONt2TmR+Lww7ndrTRPgMJE4="
+        }
+      },
+      "20": {
+        "private": {
+          "type": "Buffer",
+          "data": "yHGqiUM3qSuKrgftY+kt4va7potmQtJhNiEdYmkzbnQ="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "TzoEql2fkfHjAYW7zJIpF4OQNkxXNYl8YMFLr2oR/Hg="
+        }
+      },
+      "21": {
+        "private": {
+          "type": "Buffer",
+          "data": "uF8VcrGDV6vbDCo5lkwdOV9vElOpRX3PeHEUjYS2d0s="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "5BKY3I3XoRTiVUALkC3HNG/kZzu83cOot4aSI2AmBHY="
+        }
+      },
+      "22": null,
+      "23": {
+        "private": {
+          "type": "Buffer",
+          "data": "gN+pdKZpMiS1aNKQApv3bxD7ortGmSYA6eiDUfDWBE4="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "72PvocsVrjeYXhmOhoVx0BhUw+L82bazVak/9Bh7kmI="
+        }
+      },
+      "24": {
+        "private": {
+          "type": "Buffer",
+          "data": "+E5S0K0UJvqZTxToGK+GwmVhzTh+1E/KsfT++aF+ung="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "vwXcxZ1z1b0thjHMPR3gbEAqh9yVMjB4QXCSXVydxkE="
+        }
+      },
+      "25": {
+        "private": {
+          "type": "Buffer",
+          "data": "aA13OdbnmG4zu4hZWU6BTZFmqHJT1fqs0W9xnthQMGc="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "IQRToWf3kYzUVWloOEL3iYeTdczwg4xCjSvPVlSOpyg="
+        }
+      },
+      "26": {
+        "private": {
+          "type": "Buffer",
+          "data": "yNp4MKt50TGlINO1dcc7h0s9b0Ql+E2YJUmL0yTjJmM="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "6i1YgYWFwpN0yRr4h36aj6XI3pzCfoFNXciXFean9HQ="
+        }
+      },
+      "27": {
+        "private": {
+          "type": "Buffer",
+          "data": "AANCSkUc9xOUipSh6NScimVdBf77NSVqGxB2bYfBzWg="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "IEsMPK3Zw/5Q2J9ETk4VctWLpL9HZ65bDMryUD+NbGY="
+        }
+      },
+      "28": {
+        "private": {
+          "type": "Buffer",
+          "data": "6FZrS3H+gX+dB0ivbcuEQdDSZx3puJQ+DyVO6tF9y2U="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "nIYZ+2AqZnLNUCZvmIf2UUvdhsgN283U0F5cxFDg4T4="
+        }
+      },
+      "29": {
+        "private": {
+          "type": "Buffer",
+          "data": "KL5acOFzMGuG3YnZSxDh+7dEyX32LBf4xjlHTQFALE8="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "Nq3XFASurOzwmTp+Sh/HDe6JUCeZkSHich1o75bgQ3w="
+        }
+      },
+      "30": {
+        "private": {
+          "type": "Buffer",
+          "data": "6OBsN6cZbJhtQYJpKTEQlRr2fkAiKhSZ3yG7WRycoUo="
+        },
+        "public": {
+          "type": "Buffer",
+          "data": "Jfl0JsdwJ4VdO4u5Rx+OcE6PMtMrTsceShPPOvio32A="
+        }
+      }
+    },
+    "sessions": {
+      "94725181982.0": {
+        "_sessions": {
+          "BZ+obFh+SWwalAOXVc9XFlmyr+5WyvMalqX78NNskXZ5": {
+            "registrationId": 171953336,
+            "currentRatchet": {
+              "ephemeralKeyPair": {
+                "pubKey": "BQeZUY2Ci5LBTbmzqKYhEpT80lhsJgVwEf6IRiS/lq8n",
+                "privKey": "8NY+B+mMnv1XilAtGK/hdUUAsz10xkTapP6UfC5cKnk="
+              },
+              "lastRemoteEphemeralKey": "BZN6YXah61PCfRReIE0j17GJAs+5AHlOnlFLvHbq0rkG",
+              "previousCounter": 0,
+              "rootKey": "rGTEM1OOXCmNErSyyk4wk6NvsKdd2Awnx6kT2uVSgBI="
+            },
+            "indexInfo": {
+              "baseKey": "BZ+obFh+SWwalAOXVc9XFlmyr+5WyvMalqX78NNskXZ5",
+              "baseKeyType": 2,
+              "closed": -1,
+              "used": 1656491025777,
+              "created": 1656491025777,
+              "remoteIdentityKey": "BfOwq2UuFrrAQWhKBX/ZrxD4b8CgcXlEMAKXWXksH+BO"
+            },
+            "_chains": {
+              "BZN6YXah61PCfRReIE0j17GJAs+5AHlOnlFLvHbq0rkG": {
+                "chainKey": {
+                  "counter": 4,
+                  "key": "Iu1qVU8vFU3vCraaPApuExNak5kqIxdYYoEMbK4Eu4I="
+                },
+                "chainType": 2,
+                "messageKeys": {}
+              },
+              "BQeZUY2Ci5LBTbmzqKYhEpT80lhsJgVwEf6IRiS/lq8n": {
+                "chainKey": {
+                  "counter": -1,
+                  "key": "RbwD1sds7HLLbdGWfQbbO+lihZvGCp3u03BxUzAjxpM="
+                },
+                "chainType": 1,
+                "messageKeys": {}
+              }
+            }
+          }
+        },
+        "version": "v1"
+      }
+    },
+    "appStateSyncKeys": {
+      "AAAAABol": {
+        "keyData": "B/yEwJdHDGZi/bCl1hQ2XkPssS4V128Bm3/rMC9E02s=",
+        "fingerprint": {
+          "rawId": 687115169,
+          "currentIndex": 4,
+          "deviceIndexes": [
+            0,
+            1,
+            4
+          ]
+        },
+        "timestamp": "1656401764491"
+      },
+      "AAAAABom": {
+        "keyData": "xtLRh7+7SwvX6zC/3XXrIeZQ4uyWcmahtC9MDp0UsIA=",
+        "fingerprint": {
+          "rawId": 687115169,
+          "currentIndex": 5,
+          "deviceIndexes": [
+            0,
+            1,
+            5
+          ]
+        },
+        "timestamp": "0"
+      },
+      "AAAAABoj": {
+        "keyData": "7gF8K0SQYL27r/msqrcbHcXrCFn/fHv1K/l+fXj9iCA=",
+        "fingerprint": {
+          "rawId": 687115169,
+          "currentIndex": 3,
+          "deviceIndexes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "timestamp": "1656400738040"
+      },
+      "AAAAABok": {
+        "keyData": "IXvYjTmEmcWIKJgYOuiYJsotrv98+ssgwnQ5z1xy8vc=",
+        "fingerprint": {
+          "rawId": 687115169,
+          "currentIndex": 3,
+          "deviceIndexes": [
+            0,
+            1,
+            2
+          ]
+        },
+        "timestamp": "1656400745557"
+      },
+      "AAAAABoi": {
+        "keyData": "BAADyRkeEBvgDd9DmBnlWk1IT7ZDn0AL3/2aRxX02tA=",
+        "fingerprint": {
+          "rawId": 687115168,
+          "currentIndex": 1,
+          "deviceIndexes": [
+            0,
+            1
+          ]
+        },
+        "timestamp": "0"
+      }
+    }
   }
+}
